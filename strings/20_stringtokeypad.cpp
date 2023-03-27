@@ -1,11 +1,7 @@
-//{ Driver Code Starts
-// C++ implementation to convert a
-// sentence into its equivalent
-// mobile numeric keypad sequence
+
 #include <bits/stdc++.h>
 using namespace std;
 string printSequence(string input);
-// Driver function
 int main()
 {
 	int t;
@@ -20,7 +16,6 @@ int main()
 	return 0;
 }
 
-// } Driver Code Ends
 
 
 string printSequence(string S)
