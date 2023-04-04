@@ -1,21 +1,33 @@
+//{ Driver Code Starts
 #include <bits/stdc++.h> 
 using namespace std; 
 
+
+// } Driver Code Ends
 class Solution{
     public:
+    string func(string S)
+    {
+        // cout<<S<<endl;
+        if(S[0]=='\0') return S;
+        if(S[0]==S[1])
+        {
+            return func(S.substr(1));
+        }
+        else{
+            return S[0]+func(S.substr(1));
+        }
+    }
+    
     string removeConsecutiveCharacter(string S)
     {
-        char a=S[0];
-        string ans="";
-        ans.push_back(a);
-        for(int i=1;i<S.length();i++)
-        {
-            if(S[i]!=S[i-1]) ans.push_back(S[i]);
-        }
-        return ans;
+        int index=0;
+        S=func(S);
+        return S;
     }
 };
 
+//{ Driver Code Starts.
 int main() 
 { 
     int t;
@@ -32,3 +44,4 @@ int main()
 
 
 
+// } Driver Code Ends
