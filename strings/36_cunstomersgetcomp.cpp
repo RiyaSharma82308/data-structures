@@ -13,15 +13,12 @@ int  runCustomerSimulation(int n, string str)
         vec[str[i]-'A']++;
         if(vec[str[i]-'A']==1) {
             count++;
-            // cout<<vec[str[i]-'A']<<' '<<str[i]<<' '<<count<<endl;
             if(count>n) {
                 ans++;
-                // cout<<"answer increased "<<ans<<endl;
             }
         }
         if(vec[str[i]-'A']==2) {
             count--;
-            // cout<<vec[str[i]-'A']<<' '<<str[i]<<' '<<"here "<<count<<endl;
         }
 
     }
